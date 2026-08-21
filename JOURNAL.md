@@ -5,6 +5,80 @@ description: "A custom Meshtastic LoRa communication device for off-grid messagi
 created_at: "2026-08-18"
 ---
 
+# August 20th
+
+![](images/schematic-session-2.jpg)
+
+Today I decided to choose a gps/gnss module or a chip. 
+Turns out that standard gnss has precision of 3-10m so it is what I need 
+
+Turns out that there are bunch of sattelite systems.
+
+Reading a bit I chose the SAM-M10Q module since it is a low-cost gnss module which incorporates built-in chip, circuitry, and antenna.
+
+Then I started reading datasheet of ht-ct62 and then sx1262. 
+
+Also I then checked the firmware for ht-ct62. Thank God it was available. 
+
+
+For the display I chose ssd1306 since it is a low-cost OLED display module. 
+
+Since I do want to have a 18650 battery power supply, I need to have a buck boost converter that can step up and step down the voltage.
+
+
+So the whole thing would be something like this: 
+
+```mermaid
+flowchart TD
+    USB["USB-C <br/> 5 V"] --> CHG["BQ24074RGTR <br/> charger"]
+    BAT["18650 battery<br/> 3.0–4.2 V"] --> CHG
+    CHG --> SYS["SYS <br/> 3.0–4.5 V"]
+    SYS --> BB["TPS63001 <br/> buck-boost converter"]
+    BB --> RAIL["3.3 V rail"]
+    RAIL --> MAIN["HT-CT62 + OLED"]
+    RAIL --> LOAD["TPS22917 <br/> load switch"]
+    LOAD --> GPS["SAM-M10Q <br/> GPS module"]
+```
+
+
+I then set up the usb_c and charging IC bq24074gtr. 
+
+For setting up the charging IC I followed this logic 
+EN1 and EN2 configuration
+
+EN2 = 0
+EN1 = 1
+
+Which places the charger in USB 500 mA input-limit mode:
+
+EN2	EN1	Mode
+0	0	100 mA USB
+0	1	500 mA USB
+1	0	Current set by ILIM resistor
+1	1	Standby
+
+
+For the buck boost converter it has to be pretty much like datasheet except for PS/SYNC. 
+
+It controls the operating mode
+
+- PS/SYNC state	Mode
+- LOW/GND	Power-save mode enabled
+- HIGH	Power-save disabled; forced fixed-frequency operation
+- Clock signal	Synchronizes switching to an external clock
+
+
+## So in this session I:
+- Researched additional components
+- Chose to add SAM-M10Q GPS module, SSD1306 oled, BQ24074RGTR battery charger, and TPS63001 buck-boost converter 
+- Read the datasheets for each component
+- Started the schematic
+
+## Next steps:
+- Continue schematic 
+- Review the schematic and make any necessary changes
+
+
 # August 18th
 
 This is honestly my first journal entry. First hackclub project. And I genuinely forgot to record a lapse.
