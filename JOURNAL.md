@@ -5,6 +5,13 @@ description: "A custom Meshtastic LoRa communication device for off-grid messagi
 created_at: "2026-08-18"
 ---
 
+
+# August 21st 
+
+This day I continued the schematic and as I didn't have much time I just did the oled screen pretty quickly. 
+
+
+
 # August 20th
 
 ![](images/schematic-session-2.jpg)
