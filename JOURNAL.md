@@ -11,6 +11,7 @@ created_at: "2026-08-18"
 
 In this session I mapped the HT-CT62 labels and power/reset buttons. 
 
+Now I also mapped the SAM-M10Q and TPS22917DBV components. Everything looks good so far. Now I'm going to double check the pinout and schematic and add footprints for the components. 
 
 # August 21st  
 
