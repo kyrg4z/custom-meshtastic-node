@@ -5,11 +5,18 @@ description: "A custom Meshtastic LoRa communication device for off-grid messagi
 created_at: "2026-08-18"
 ---
 
+# August 22nd 
 
-# August 21st 
+![](images/session-4.jpg)
+
+In this session I mapped the HT-CT62 labels and power/reset buttons. 
+
+
+# August 21st  
 
 This day I continued the schematic and as I didn't have much time I just did the oled screen pretty quickly. 
 
+I also found out that I'd need to load meshtastic firmware with certain configuration that has gps and oled pins enabled since on the ht-ct62 they aren't labeled by default. 
 
 
 # August 20th
