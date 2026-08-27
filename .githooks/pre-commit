@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+#
+# Refresh images/PCB.svg from the schematic whenever it is part of a commit,
+# and stage the result so the picture travels in the same commit.
+#
+# Enable once per clone:
+#     git config core.hooksPath .githooks
+#
+set -euo pipefail
+
+SCH="PCB/PCB.kicad_sch"
+OUT_DIR="images"
+OUT="$OUT_DIR/PCB.svg"
+
+# Nothing to do unless the schematic itself is staged in this commit.
+if ! git diff --cached --name-only | grep -qx "$SCH"; then
+    exit 0
+fi
+
+# Locate kicad-cli: native install first, then a Flatpak KiCad.
+if command -v kicad-cli >/dev/null 2>&1; then
+    KICLI=(kicad-cli)
+elif flatpak info org.kicad.KiCad >/dev/null 2>&1; then
+    KICLI=(flatpak run --command=kicad-cli org.kicad.KiCad)
+else
+    echo "pre-commit: kicad-cli not found - keeping the existing $OUT" >&2
+    exit 0
+fi
+
+tmp="$(mktemp -d)"
+trap 'rm -rf "$tmp"' EXIT
+
+if ! "${KICLI[@]}" sch export svg -o "$tmp" "$SCH" >/dev/null 2>&1; then
+    echo "pre-commit: schematic export failed - keeping the existing $OUT" >&2
+    exit 0
+fi
+
+# Single-sheet schematic => exactly one SVG, named after the project.
+svg="$(find "$tmp" -maxdepth 1 -name '*.svg' | head -n1)"
+if [ -z "$svg" ]; then
+    echo "pre-commit: no SVG was produced - keeping the existing $OUT" >&2
+    exit 0
+fi
+
+mkdir -p "$OUT_DIR"
+mv -f "$svg" "$OUT"
+git add "$OUT"
+echo "pre-commit: refreshed $OUT"
