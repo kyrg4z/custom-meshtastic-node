@@ -5,6 +5,30 @@ description: "A custom Meshtastic LoRa communication device for off-grid messagi
 created_at: "2026-08-18"
 ---
 
+
+# Sep-16, Sep-21 -- Oct-4th 
+
+![](images/session-5.jpg)
+
+![](images/session-5.1.jpg)
+
+In this period of time I found myself stretched apart by school assignments, tests, and community as well as other projects in need of my attention. 
+
+So yeah, it's a bit delayed. 
+
+I finally finished the schematic and fixed it. 
+
+- [x] Removed the switch for the gnss module because there was no free gpio on the ht-ct62.  
+- [x] Battery sense moved from GPIO3 to GPIO0
+  - GPIO3 is the LoRa radio's interrupt line inside the HT-CT62, so it now has a no-connect flag.
+- [x] Decided on Keystone 1042 as the holder for the battery. 
+- [x] Added the esd protection for the usb-c
+- [x] Added a fuse, and IC protection circuits to the charging circuit just in case 
+- [x] Added an LED to the CHG on the BQ24074RGT, so it would indicate charging and stuff 
+- [x] Ran the ERC, added power connector flags cause KiCad didn't like it 
+- [x] Assigned footprints. 
+
+
 # August 22nd 
 
 ![](images/session-4.jpg)
