@@ -9262,7 +9262,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+		(property "Footprint" "Battery:BatteryHolder_Keystone_1042_1x18650"
 			(at 80.01 92.71 0)
 			(hide yes)
 			(show_name no)
