@@ -6,10 +6,18 @@ created_at: "2026-08-18"
 ---
 
 
+
+
 # Oct-7th 
+7th 
 - Placed all the components. Decided to put the battery holder (J2) on the back.
 - Started routing
 
+8th 
+- Routed most of the components
+
+9th 
+- Finished routing and fixed the DRCs. 
 
 
 # Sep-16, Sep-21 -- Oct-4th 
