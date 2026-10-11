@@ -12,7 +12,7 @@ A custom Meshtastic compatible LoRa communication device that is designed for of
 Interactive KiCad viewer powered by [KiCanvas](https://kicanvas.org):
 
 - **[Open schematic in KiCanvas](https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2Fkyrg4z%2Fcustom-meshtastic-node%2Fblob%2Fmain%2FPCB%2FPCB.kicad_sch)**
-- **[Open PCB layout in KiCanvas](https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2Fkyrg4z%2Fcustom-meshtastic-node%2Fblob%2Fmain%2FPCB%2FPCB.kicad_pcb)** _(board not routed yet — preview will be empty)_
+- **[Open PCB layout in KiCanvas](https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2Fkyrg4z%2Fcustom-meshtastic-node%2Fblob%2Fmain%2FPCB%2FPCB.kicad_pcb)** _
 
 A live, embedded viewer is hosted via GitHub Pages: **https://kyrg4z.github.io/custom-meshtastic-node/**
 
