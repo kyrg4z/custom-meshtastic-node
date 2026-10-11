@@ -19,6 +19,18 @@ created_at: "2026-08-18"
 9th 
 - Finished routing and fixed the DRCs. 
 
+10th
+- Reviewed again, fixed couple of things.  
+- Exported to gerbers
+- Created BOM 
+
+firmware notes:
+Oled SDA/SCL - GPIO1 & 2
+GPS MCU RX/TX - GPIO20 & 21
+Battery sense (100k/100k divider) - GPIO0 
+Button - GPIO 9 
+LoRA - same as stock 
+
 
 # Sep-16, Sep-21 -- Oct-4th 
 
