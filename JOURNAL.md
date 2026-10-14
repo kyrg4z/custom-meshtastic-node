@@ -8,7 +8,7 @@ created_at: "2026-08-18"
 
 
 
-# Oct-7th - 12th 
+# Oct-7th - 14th 
 7th 
 
 - Placed all the components. Decided to put the battery holder (J2) on the back. For the mechanical design I think it would be better due to it staying mostly horizontal and not making it too big horizontally. 
@@ -20,10 +20,10 @@ created_at: "2026-08-18"
 
 9th 
 
-![](assets/2026-10-13-10-51-08.png)
+![](images/2026-10-13-10-51-08.png)
 
 
-![](assets/2026-10-13-10-51-29.png)
+![](images/2026-10-13-10-51-29.png)
 
 - Finished routing, filled the ground zones and fixed the DRCs. 
 
@@ -37,7 +37,7 @@ There were some errors that said some unrouted or ground fills. I figured that I
 Wrote a custom Meshtastic firmware variant based on the stock HT-CT62 one because the stock firmware doesn't have the oled and gps enabled by default. 
 
 
-![](assets/2026-10-13-10-26-28.png)
+![](images/2026-10-13-10-26-28.png)
 
 
 firmware notes:
@@ -52,11 +52,19 @@ Previewing the project on the pcbway. Fixed the BOM as some components weren't i
 
 
 
-![](assets/2026-10-13-10-25-45.png)
+![](images/2026-10-13-10-25-45.png)
 
 
 Prepared the BOM, researched about the components. A kind friend of mine explained me which components and parts to choose from DigiKey.  
 X5R or X7R are good for temperature coefficients for capacitors. 
+
+14th 
+
+Fixed the BOM again. Made the OLED DNP, bc it's just easier to order and solder yourself. 
+
+![](/images/dnp.jpg)
+
+Worked on the README more than the journal. 
 
 # Sep-16, Sep-21 -- Oct-4th 
 

@@ -1,0 +1,62 @@
+# Refresh images/PCB-front.svg and images/PCB-back.svg from the board
+# whenever PCB/PCB.kicad_pcb changes on main, and commit them back.
+# PCB counterpart of the schematic snapshot in .githooks/pre-commit.
+name: PCB snapshot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - PCB/PCB.kicad_pcb
+      - .github/workflows/pcb-snapshot.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pcb-snapshot
+  cancel-in-progress: true
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    container:
+      # Must match the KiCad version the board was saved with (file format 2026xxxx = KiCad 10).
+      image: kicad/kicad:10.0.6
+      options: --user root
+    env:
+      PCB: PCB/PCB.kicad_pcb
+      OUT_DIR: images
+    steps:
+      # checkout needs git in the container to leave a pushable repo behind.
+      - name: Install git
+        run: command -v git || (apt-get update && apt-get install -y --no-install-recommends git ca-certificates)
+
+      - uses: actions/checkout@v4
+
+      - name: Export front and back SVGs
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT_DIR"
+          common="--mode-single --exclude-drawing-sheet --page-size-mode 2"
+          kicad-cli pcb export svg $common \
+            --layers F.Cu,F.Mask,F.Silkscreen,Edge.Cuts \
+            -o "$OUT_DIR/PCB-front.svg" "$PCB"
+          kicad-cli pcb export svg $common --mirror \
+            --layers B.Cu,B.Mask,B.Silkscreen,Edge.Cuts \
+            -o "$OUT_DIR/PCB-back.svg" "$PCB"
+
+      - name: Commit updated snapshots
+        run: |
+          set -euo pipefail
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git add "$OUT_DIR/PCB-front.svg" "$OUT_DIR/PCB-back.svg"
+          if git diff --cached --quiet; then
+            echo "PCB snapshots already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update PCB snapshot [skip ci]"
+          git push
