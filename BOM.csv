@@ -1,0 +1,37 @@
+#,Reference,Value,Manufacturer,Manufacturer Part #,Footprint,Notes,,,,,
+1,C1,1uF,Murata Electronics,GRT188R61H105KE13D,Capacitor_SMD:C_0603_1608Metric,,,,,,
+2,"C2,C3,C5,C6,C7,C10,C12,C15",10uF,"Cal-Chip Electronics, Inc.",GMC21X7R106K25NT,Capacitor_SMD:C_0805_2012Metric,,,,,,
+3,"C8,C9,C11,C16,C18,C20,C21",100nF,Murata Electronics,GCJ188R71E104KA12D,Capacitor_SMD:C_0603_1608Metric,,,,,,
+4,C13,2.2uF,YAGEO,CC0603KRX5R8BB225,Capacitor_SMD:C_0603_1608Metric,,,,,,
+5,D1,CHG,Lite-On Inc.,LTST-C191KRKT,LED_SMD:LED_0603_1608Metric,Charge status LED,,,,,
+6,F1,1.5A PTC,Littelfuse Inc.,1206L150SLYR,Fuse:Fuse_1206_3216Metric,Resettable fuse,,,,,
+7,J1,USB-C 16P,Korean Hroparts Elec,TYPE-C-31-M-12,Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12,,,,,,
+8,J2,18650 holder,Keystone Electronics,1042,Battery:BatteryHolder_Keystone_1042_1x18650,,,,,,
+9,L1,2.2uH,Bourns Inc.,SRN3015-2R2M,Inductor_SMD:L_Taiyo-Yuden_NR-30xx,Check pads vs SRN3015 datasheet,,,,,
+10,Q1,SI6968BEDQ,Vishay Siliconix,SI6968BEDQ-T1-GE3,Package_SO:TSSOP-8_4.4x3mm_P0.65mm,Pin-compatible with FS8205A,,,,,
+11,"R1,R2",5.1k,Bourns Inc.,CR0603-FX-5101ELF,Resistor_SMD:R_0603_1608Metric,USB-C CC pull-downs,,,,,
+12,"R3,R4",22,YAGEO,RC0603FR-0722RL,Resistor_SMD:R_0603_1608Metric,USB D+/D- series,,,,,
+13,R5,100,YAGEO,RC0603FR-07100RL,Resistor_SMD:R_0603_1608Metric,,,,,,
+14,R6,3k,YAGEO,RC0603FR-073KL,Resistor_SMD:R_0603_1608Metric,,,,,,
+15,R7,3.09k,YAGEO,RC0603FR-073K09L,Resistor_SMD:R_0603_1608Metric,,,,,,
+16,"R8,R9",4.7k,YAGEO,RC0603FR-074K7L,Resistor_SMD:R_0603_1608Metric,I2C pull-ups,,,,,
+17,"R10,R11,R19,TH1",10k,YAGEO,AR0603FR-0710KL,Resistor_SMD:R_0603_1608Metric,TH1 = fixed 10k (disables BQ24074 temp sensing),,,,,
+18,"R14,R15",100k,YAGEO,RC0603FR-07100KL,Resistor_SMD:R_0603_1608Metric,Battery voltage divider,,,,,
+19,R16,470,YAGEO,RC0603FR-07470RL,Resistor_SMD:R_0603_1608Metric,,,,,,
+20,"R17,R18",1k,YAGEO,RC0603FR-071KL,Resistor_SMD:R_0603_1608Metric,,,,,,
+21,"SW1,SW2",Reset / Boot,C&K,PTS810SJS250SMTR LFS,Button_Switch_SMD:SW_SPST_PTS810,,,,,,
+22,U1,HT-CT62,Heltec Automation,HT-CT62 902-928MHz,RF_Module:Heltec_HT-CT62,"heltec.org/project/ht-ct62. Gentle reflow profile, shield can may shift",,,,,
+23,U2,SAM-M10Q,u-blox,SAM-M10Q-00B,RF_GPS:ublox_SAM-M8Q,Pin-compatible with SAM-M8Q footprint,,,,,
+24,U4,TPS63001,Texas Instruments,TPS63001DRCR,Package_SON:Texas_DRC0010J_ThermalVias,3.3 V buck-boost,,,,,
+25,U6,BQ24074,Texas Instruments,BQ24074RGTR,Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm,Charger / power path,,,,,
+26,U7,DW01A,"Shenzhen Slkormicro Semicon Co., Ltd.",DW01A,Package_TO_SOT_SMD:SOT-23-6,Battery protection,,,,,
+27,U8,USBLC6-2SC6,STMicroelectronics,USBLC6-2SC6,Package_TO_SOT_SMD:SOT-23-6,USB ESD protection,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+Additional Parts,,,,,,,,,,,
+#,Part,Category,Manufacturer,Manufacturer Part #,Supplier,Qty,Unit price,Currency,Line total,Link,Notes
+1,"0.91"" 128x32 I2C OLED (blue)",Display,EastRising,ER-OLEDM0.91-1B-I2C,BuyDisplay,3,$2.80,USD,$8.40,https://www.buydisplay.com/i2c-blue-0-91-inch-oled-display-module-128x32-arduino-raspberry-pi,U3 (DNP). 2 + 1 spare. Hand-solder; check pin order vs silkscreen.
+2,"U.FL to SMA female bulkhead pigtail, 15""",LoRa antenna cable,Pulse Electronics,W9015M,Digi-Key Canada,2,$7.53,CAD,$15.06,https://www.digikey.ca/en/products/detail/pulse-electronics/W9015M/2267912,"SMA (not RP-SMA). Shorter W9006M (6"") is the same price if 15"" is too long."
+3,"915 MHz whip antenna, SMA male",LoRa antenna,Abracon LLC,AEACAC054010-S915,Digi-Key Canada,2,$10.40,CAD,$20.80,https://www.digikey.ca/en/products/detail/abracon-llc/AEACAC054010-S915/9962429,"880-950 MHz, 2 dBi. Screws onto the pigtail."
+4,"2.4 GHz FlexPIFA antenna, U.FL",BLE antenna,Ezurio,001-0014,Digi-Key Canada,2,$7.38,CAD,$14.76,https://www.digikey.ca/en/products/detail/ezurio/001-0014/4732758,"Adhesive, 100 mm cable. Plugs into the 2.4G socket on U1."
+5,18650 Li-ion cell,Battery,-,-,Already owned,2,-,CAD,-,,Already have these.
