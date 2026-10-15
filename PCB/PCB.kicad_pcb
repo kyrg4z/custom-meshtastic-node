@@ -10795,7 +10795,7 @@
 			(uuid "5591454c-4d09-4105-9291-3c6f80343871")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/3dmodels/ER-OLEDM0.91_carrier_standin.step"
+		(model "${KIPRJMOD}/3dmodels/ER-OLEDM0.91-1_module.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10804,17 +10804,6 @@
 			)
 			(rotate
 				(xyz 0 0 0)
-			)
-		)
-		(model "${KIPRJMOD}/3dmodels/oled.stp"
-			(offset
-				(xyz 4.94 -15.96 4.1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 90)
 			)
 		)
 	)

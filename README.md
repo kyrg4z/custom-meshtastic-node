@@ -77,7 +77,7 @@ Full board assembly with every component: [PRODUCTION/PCB.step](PRODUCTION/PCB.s
 | ![3D top](images/front.jpg) | ![3D bottom](images/back.jpg) |
 
 > [!NOTE]
-> U1 (HT-CT62), U2 (SAM-M10Q) and the OLED carrier board/header (U3) are dimensioned stand-in models generated with CadQuery, since no vendor STEP was available.
+> U1 (HT-CT62), U2 (SAM-M10Q) and the OLED module (U3) are dimensioned models generated with CadQuery, since no vendor STEP was available.
 
 ## Preview
 
