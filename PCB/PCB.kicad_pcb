@@ -3154,7 +3154,7 @@
 			(uuid "6507a419-d715-4167-b63a-91ee815cb649")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/VQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm.step"
+		(model "${KICAD10_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/WQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5389,7 +5389,7 @@
 			(uuid "2ffd9157-e58f-4fa3-8846-d638e3173eea")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/RF_GPS.3dshapes/ublox_SAM-M8Q.step"
+		(model "${KIPRJMOD}/3dmodels/ublox_SAM-M10Q_standin.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6411,7 +6411,7 @@
 			(uuid "40df1936-afb1-4f03-9d42-7cef912af5b1")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step"
+		(model "${KICAD10_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7769,7 +7769,7 @@
 			(uuid "182de68a-1c22-4b11-a27d-15ff23413a73")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Package_SON.3dshapes/Texas_DRC0010J.step"
+		(model "${KICAD10_3DMODEL_DIR}/Package_SON.3dshapes/VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10795,6 +10795,28 @@
 			(uuid "5591454c-4d09-4105-9291-3c6f80343871")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/3dmodels/ER-OLEDM0.91_carrier_standin.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "${KIPRJMOD}/3dmodels/oled.stp"
+			(offset
+				(xyz 4.94 -15.96 4.1)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 90)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -11661,7 +11683,7 @@
 			(uuid "7d879a82-30e8-4753-9ed3-9ba0508038ed")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Taiyo-Yuden_NR-30xx.step"
+		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Changjiang_FNR3015S.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -13416,7 +13438,7 @@
 			(uuid "77205c16-e3dd-444f-a540-40ea83af585f")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/RF_Module.3dshapes/Heltec_HT-CT62.step"
+		(model "${KIPRJMOD}/3dmodels/Heltec_HT-CT62_standin.step"
 			(offset
 				(xyz 0 0 0)
 			)

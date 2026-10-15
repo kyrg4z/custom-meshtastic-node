@@ -56,6 +56,8 @@ Along the way, I learned how LoRa works(DefCon talks were amazing), how to do PC
 - ENIG surface finish
 - Fabricated and assembled by PCBWay (OLED hand-soldered)
 
+No enclosure is part of this submission. The board is meant to be tested bare first, and a case may come in a later revision.
+
 ## Firmware
  
 - Meshtastic
@@ -63,6 +65,19 @@ Along the way, I learned how LoRa works(DefCon talks were amazing), how to do PC
 - Planning to implement Reticulum support  
 - Status: not yet flashed (waiting on boards)
 
+
+## 3D Model
+
+Full board assembly with every component: [PRODUCTION/PCB.step](PRODUCTION/PCB.step)
+
+![3D model, iso view](images/iso.jpg)
+
+| Top | Bottom |
+| :---: | :---: |
+| ![3D top](images/front.jpg) | ![3D bottom](images/back.jpg) |
+
+> [!NOTE]
+> U1 (HT-CT62), U2 (SAM-M10Q) and the OLED carrier board/header (U3) are dimensioned stand-in models generated with CadQuery, since no vendor STEP was available.
 
 ## Preview
 
