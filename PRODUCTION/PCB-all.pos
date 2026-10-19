@@ -1,4 +1,4 @@
-### Footprint positions - created on 2026-10-10T23:48:54 ###
+### Footprint positions - created on 2026-10-18T20:18:30 ###
 ### Printed by KiCad version 10.0.6-1.fc44
 ## Unit = mm, Angle = deg.
 ## Side : All
@@ -8,9 +8,9 @@ C1        1uF                          C_0603_1608Metric                       2
 C2        10uF                         C_0805_2012Metric                       27.0000    11.5000    0.0000  top
 C3        10uF                         C_0805_2012Metric                       27.0000     9.0000    0.0000  top
 C5        10uF                         C_0805_2012Metric                       27.0500    24.5000  180.0000  top
-C6        10uf                         C_0805_2012Metric                       27.0000    17.0000  180.0000  top
+C6        10uF                         C_0805_2012Metric                       27.0000    17.0000  180.0000  top
 C7        10uF                         C_0805_2012Metric                       45.5000     5.5500  -90.0000  top
-C8        0.1uF                        C_0603_1608Metric                       36.5000    20.4500   90.0000  top
+C8        100nF                        C_0603_1608Metric                       36.5000    20.4500   90.0000  top
 C9        100nF                        C_0603_1608Metric                       97.5000    13.7250   90.0000  top
 C10       10uF                         C_0805_2012Metric                       36.5000    24.0000   90.0000  top
 C11       100nF                        C_0603_1608Metric                       43.0000     5.5000   90.0000  top
@@ -25,7 +25,7 @@ D1        CHG                          LED_0603_1608Metric                     2
 F1        1206L150SLYR                 Fuse_1206_3216Metric                     6.5000    33.5000    0.0000  top
 J1        USB_C_Receptacle_USB2.0_16P  USB_C_Receptacle_HRO_TYPE-C-31-M-12      3.4000    10.8900  -90.0000  top
 L1        2.2uH                        L_Taiyo-Yuden_NR-30xx                   26.5000    20.5000  -90.0000  top
-Q1        FS8205A                      TSSOP-8_4.4x3mm_P0.65mm                 88.6375    33.0000    0.0000  top
+Q1        SI6968BEDQ                   TSSOP-8_4.4x3mm_P0.65mm                 88.6375    33.0000    0.0000  top
 R1        5.1k                         R_0603_1608Metric                       13.0000    12.0000    0.0000  top
 R2        5.1k                         R_0603_1608Metric                       13.5000     4.0000    0.0000  top
 R3        22                           R_0603_1608Metric                       53.0000     5.6750   90.0000  top
@@ -48,7 +48,6 @@ SW2       SW_Push_Boot                 SW_SPST_PTS810                          6
 TH1       10k                          R_0603_1608Metric                       17.0000    13.5000    0.0000  top
 U1        HT-CT62                      Heltec_HT-CT62                          51.5000    19.0000    0.0000  top
 U2        SAM-M10Q                     ublox_SAM-M8Q                           87.0000    14.0000  180.0000  top
-U3        ER_OLEDM0.91_1x-I2C          ER_OLEDM0.91_1x-I2C                     43.5000    47.8100  -90.0000  top
 U4        TPS63001                     Texas_DRC0010J_ThermalVias              31.5000    20.5000    0.0000  top
 U6        BQ24074RGT                   VQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm    22.2500     9.5625    0.0000  top
 U7        DW01A                        SOT-23-6                                89.0000    38.5000    0.0000  top

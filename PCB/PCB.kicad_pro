@@ -584,6 +584,18 @@
       "fields_ordered": [
         {
           "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Qty",
+          "name": "${QUANTITY}",
+          "show": true
+        },
+        {
+          "group_by": false,
           "label": "Reference",
           "name": "Reference",
           "show": true
@@ -593,12 +605,6 @@
           "label": "Value",
           "name": "Value",
           "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Qty",
-          "name": "${QUANTITY}",
-          "show": false
         },
         {
           "group_by": false,
@@ -616,19 +622,13 @@
           "group_by": false,
           "label": "DNP",
           "name": "${DNP}",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Exclude from Board",
-          "name": "${EXCLUDE_FROM_BOARD}",
-          "show": false
+          "show": true
         },
         {
           "group_by": true,
@@ -638,21 +638,9 @@
         },
         {
           "group_by": false,
-          "label": "MPN",
-          "name": "MPN",
-          "show": false
-        },
-        {
-          "group_by": false,
           "label": "Description",
           "name": "Description",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -672,7 +660,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "${ITEM_NUMBER}"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -715,7 +703,7 @@
         "uuid": "15e8d61b-1311-48ad-9e99-18af27ddc1c5"
       }
     ],
-    "used_designators": "NTC1,#FLG2-5,F1,U7-8,Q1,R12-19,D1,C4,C15-16,C18-21,#PWR5-6,#PWR46-47,#PWR49-65,J2",
+    "used_designators": "VCC1,J2-3,#PWR4-6,#PWR9,#PWR11,#PWR27,#PWR34,#PWR44-65,C4,C15-16,C18-21,R8-9,R12-19,Q1,GND1,F1,#FLG2-5,SCL1,SDA1,D1,U7-8,NTC1",
     "variants": []
   },
   "sheets": [
